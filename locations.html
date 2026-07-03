@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="stylesheet" href="locations.css">
+    <link rel="icon" href="logo.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Locations - Shaafi Hospital</title>
+    <!-- <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        /* Header / Navbar Styling */
+        header {
+            background-color: #006687;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Navigation Menu (Qurxin lagu daray si ay u toosnaato) */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background-color: #004b64;
+            padding: 10px;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a img {
+            height: 50px; /* Hoos ayaa loo dhigay cabbirka sawirada si navigation-ku u qurux badnaado */
+            width: auto;
+            transition: transform 0.2s;
+        }
+
+        nav ul li a img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #006687;
+        }
+
+        /* Locations Grid */
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        /* Location Card Styling */
+        .location-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-top: 5px solid #006687;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .current-location {
+            border-top: 5px solid #28a745; /* Green border for current location */
+        }
+
+        .badge {
+            align-self: flex-start;
+            background-color: #28a745;
+            color: white;
+            padding: 3px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .location-card h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .location-card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Google Map Wrapper */
+        .map-container {
+            width: 100%;
+            height: 200px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .btn-map {
+            display: block;
+            background-color: #006687;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            text-align: center;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .btn-map:hover {
+            background-color: #004b64;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a252f;
+            color: white;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style> -->
+</head>
+<body>
+
+   <header>
+        <h1><img src="logo.png" alt="logo" height="200px" width="200px"><br>Shaafi Hospital 🏥</h1>
+        </header>
+        <nav>
+           <ul>
+    <li><a href="index.html"><img src="home.png" alt="Home page" height="150px" width="100px"></a>&nbsp;&nbsp;</li>
+    <li><a href="about.html"><img src="about.png" alt="about page" height="150px" width="100px"></a>&nbsp;&nbsp;</li>
+   <li><a href="registration.html"><img src="register.png" alt="register page" height="100px" width="100px"></a>&nbsp;&nbsp;</li>
+   <li><a href="table.html"><img src="table.png" alt="Table page" height="100px" width="100px"></a>&nbsp;&nbsp;</li>
+   <li><a href="services.html"><img src="services.png" alt="services page" height="100px" width="100px"></a>&nbsp;&nbsp;</li>
+   <li><a href="locations.html"><img src="locations.jpg" alt="location" height="100px" width="100px"></a>&nbsp;&nbsp;</li>
+  
+   <li><a href="contact.html"><img src="contact.png" alt="services page" height="100px" width="100px"></a>&nbsp;&nbsp;</li> 
+</ul>
+        </nav>
+
+    <div class="container">
+        <h2 class="page-title">Our Branches & Locations</h2>
+
+        <div class="locations-grid">
+            
+            <!-- 1. Current Location (Mogadishu Main Branch) -->
+            <div class="location-card current-location">
+                <div>
+                    <span class="badge">Your Current Location</span>
+                    <h3>1. Mogadishu Main Branch</h3>
+                    <p><strong>Address:</strong> Hodan District, Mogadishu, Banadir, Somalia.<br>
+                       <strong>Hours:</strong> Saturday - Wednesday (06:40 AM - 05:40 PM)</p>
+                    
+                    <!-- Google Map Embed -->
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.054326508933!2d45.312345!3d2.045678!2m3!1f0!2f0!3f0!3m2!1i1020!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMDInNDQuNCJOIDQ1wrAxOCc0NC40IkU!5e0!3m2!1sen!2sso!4v1700000000000!5m2!1sen!2sso" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <a href="https://maps.google.com/?q=Shaafi+Hospital+Hodan+Mogadishu" target="_blank" class="btn-map">Open Full Map 🗺️</a>
+            </div>
+
+            <!-- 2. Bakaaro Market -->
+            <div class="location-card">
+                <div>
+                    <h3>2. Bakaaro Market Branch</h3>
+                    <p><strong>Address:</strong> Bakaaro Market, Near Afarta Darjiin Intersection, Mogadishu.<br>
+                       <strong>Hours:</strong> Saturday - Wednesday (07:00 AM - 05:00 PM)</p>
+                    
+                    <!-- Google Map Embed -->
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.045612345678!2d45.321234!3d2.051234!2m3!1f0!2f0!3f0!3m2!1i1020!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMDMnMDQuNCJOIDQ1wrAxOScxNi40IkU!5e0!3m2!1sen!2sso!4v1700000000000!5m2!1sen!2sso" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <a href="https://maps.google.com/?q=Bakaaro+Market+Mogadishu" target="_blank" class="btn-map">Open Full Map 🗺️</a>
+            </div>
+
+            <!-- 3. Digfeer -->
+            <div class="location-card">
+                <div>
+                    <h3>3. Digfeer Branch</h3>
+                    <p><strong>Address:</strong> Digfeer Road, Opposite Digfeer Hospital, Mogadishu.<br>
+                       <strong>Hours:</strong> Saturday - Wednesday (07:30 AM - 05:30 PM)</p>
+                    
+                    <!-- Google Map Embed -->
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.061234567890!2d45.305678!3d2.039876!2m3!1f0!2f0!3f0!3m2!1i1020!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMDInMjMuNiJOIDQ1wrAxOCcyMC40IkU!5e0!3m2!1sen!2sso!4v1700000000000!5m2!1sen!2sso" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <a href="https://maps.google.com/?q=Digfeer+Road+Mogadishu" target="_blank" class="btn-map">Open Full Map 🗺️</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Shaafi Hospital 🏥. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

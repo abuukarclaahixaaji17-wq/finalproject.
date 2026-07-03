@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style1.css">
+    <!-- Waxaan ku daray link-gan si ay astaanta baraha bulshada u shaqeeyaan -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="logo.png">
+    <meta charset="UTF-8">
+    <!-- Khadkan wuxuu muhiim u yahay inuu shaqeeyo responsiv-ka (Mobilada) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Stylin kooban si liiska baraha bulshada u yeesho bilic qurxoon */
+        .contact-list {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-list li {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+        .contact-list a {
+            text-decoration: none;
+            color: #333;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s;
+        }
+        /* Midabada rasmiga ah ee apps-ka marka jiirka (mouse) la mariyo */
+        .contact-list .facebook:hover { color: #1877F2; }
+        .contact-list .linkedin:hover { color: #0077B5; }
+        .contact-list .whatsapp:hover { color: #25D366; }
+        .contact-list .email:hover { color: #EA4335; }
+
+        /* Qaybaha lagu daray si koodhka loogu dhigo responsive */
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            gap: 15px;
+        }
+        nav ul li a img {
+            max-width: 100%;
+            height: auto;
+        }
+        main, footer, header {
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Habaynta shaashadaha yaryar (Mobilada) */
+        @media (max-width: 600px) {
+            header img {
+                width: 120px; /* Logo-da oo yaraneysa marka moobil lagu jiro */
+            }
+            nav ul li a img {
+                width: 60px; /* Badhamada menu-ka oo yaranya si ay u wada galaan safka */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><img src="logo.png" alt="logo" height="200px" width="200px"><br>Shaafi Hospital 🏥</h1>
+    </header>
+    
+    <hr> <!-- Khadkan wuxuu si muuqata u kala saarayaa magaca Isbitaalka iyo Navigation-ka -->
+
+    <nav>
+        <ul>
+            <li><a href="index.html"><img src="home.png" alt="Home page" height="150px" width="100px"></a></li>
+            <li><a href="about.html"><img src="about.png" alt="about page" height="150px" width="100px"></a></li>
+            <li><a href="registration.html"><img src="register.png" alt="register page" height="100px" width="100px"></a></li>
+            <li><a href="table.html"><img src="table.png" alt="Table page" height="100px" width="100px"></a></li>
+            <li><a href="services.html"><img src="services.png" alt="services page" height="100px" width="100px"></a></li>
+            <li><a href="contact.html"><img src="contact.png" alt="services page" height="100px" width="100px"></a></li> 
+        </ul>
+    </nav>
+    <main>
+        <h1>Contact Us</h1>
+        <p>Feel free to reach out to us through any of the platforms below:</p>
+
+        <hr>
+
+        <h3>Connect with Us:</h3>
+        <!-- Qaybta la habeeyay ee wadata Logos-ka -->
+        <ul class="contact-list">
+            <li>
+                <a href="https://www.facebook.com/t.e.boss.971514" target="_blank" class="facebook">
+                    <i class="fab fa-facebook fa-lg"></i> Facebook
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/bakar-cabdala-0638172b4?" target="_blank" class="linkedin">
+                    <i class="fab fa-linkedin fa-lg"></i> LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/+252610540264" target="_blank" class="whatsapp">
+                    <i class="fab fa-whatsapp fa-lg"></i> WhatsApp
+                </a>
+            </li>
+            <li>
+                <a href="mailto:abuukarclaahixaaji17@gmail.com" class="email">
+                    <i class="fas fa-envelope fa-lg"></i> E-mail
+                </a>
+            </li>
+        </ul>
+
+        <hr>
+
+        <p>Thank you for visiting!</p>
+    </main>
+    <footer>
+        <p>&copy; 2026 Shaafi Hospital 🏥. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,256 @@
+/* --- 1. Dib-u-habayn Guud (Reset & Fonts) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #0b6285; /* Teal-ka rasmiga ah ee logada 1000375314.png */
+    --secondary-color: #17a2b8; /* Buluugga furan */
+    --accent-color: #dc3545; /* Casaanka calaamadda + */
+    --light-bg: #f4f9fc; /* Midabka dambe ee fudud */
+    --dark-text: #2c3e50;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+    /* Booskan hadda si toos ah ayuu ula jaan-qaadayaa dhererka header-ka oo isku duuban */
+    padding-top: 170px; 
+}
+
+/* --- 2. Qaybta Sare ee Go'an (Fixed Header & Nav) --- */
+/* Waxaan ku kulminay hal meel oo go'an (Fixed Container) si aysan marnaba isku dhex gelin */
+.fixed-top-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: var(--white);
+    text-align: center;
+    padding: 10px 0;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+header img {
+    height: 65px !important; 
+    width: auto !important;
+}
+
+/* Navigation bar-ka - Hadda wuxuu si dabiici ah u raacayaa header-ka hoostiisa */
+nav {
+    background-color: var(--primary-color);
+    width: 100%;
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    gap: 15px;
+}
+
+nav ul li a img {
+    height: 45px !important; 
+    width: auto !important;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0) invert(1); 
+}
+
+nav ul li a img:hover {
+    transform: scale(1.1);
+    filter: none; 
+}
+
+/* --- 3. Qaabdhismeedka 2-Column (Flexbox Layout) --- */
+main {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 25px;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+main h1, main h2 {
+    width: 100%; 
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--light-bg);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+main p {
+    flex: 1 1 45%; 
+    min-width: 300px;
+}
+
+/* --- 4. Naqshadaynta Foomka iyo Legend-ka --- */
+form {
+    width: 100%;
+    margin-top: 15px;
+}
+
+fieldset {
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background: var(--white);
+    position: relative; 
+}
+
+legend {
+    color: var(--primary-color);
+    font-weight: bold;
+    background-color: var(--white);
+    padding: 0 10px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- 5. Naqshadaynta Adeegyada --- */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.Box {
+    background: var(--light-bg);
+    border-top: 4px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 280px;
+    max-width: 330px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* --- 6. Shaxda --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px;
+}
+
+table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* --- 7. Bogga About us --- */
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+dt {
+    flex: 1 1 200px;
+    text-align: center;
+    background: #edf5f8;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+dt img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+dd {
+    flex: 2 1 350px;
+    display: flex;
+    align-items: center;
+}
+
+/* --- 8. Qaybta Hoose (Footer) --- */
+footer {
+    background-color: var(--dark-text);
+    color: var(--white);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* --- 9. Responsive (Taleefannada) --- */
+@media (max-width: 768px) {
+    body {
+        padding-top: 210px; /* Boos sax ah marka uu screen-ku yaryado oo header-ku dheeraado */
+    }
+    header h1 {
+        flex-direction: column;
+        gap: 5px;
+    }
+    nav ul {
+        flex-wrap: wrap; /* Haddii sawiradu badnaadaan moobilka way isku jorayaan si aysan shaashada uga bixin */
+        gap: 10px;
+    }
+    main {
+        flex-direction: column;
+    }
+}

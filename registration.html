@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="hhhh.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <header>
+        <h1><img src="logo.png" alt="logo" height="200px" width="200px"><br>Shaafi Hospital 🏥</h1>
+        </header>
+   
+    <nav>
+        <ul>
+            <li><a href="index.html"><img src="home.png" alt="Home page" height="150px" width="100px"></a>&nbsp;&nbsp;</li>
+            <li><a href="about.html"><img src="about.png" alt="about page" height="150px" width="100px"></a>&nbsp;&nbsp;</li>
+            <li><a href="registration.html"><img src="register.png" alt="register page" height="100px" width="100px"></a>&nbsp;&nbsp;</li>
+            <li><a href="table.html"><img src="table.png" alt="Table page" height="100px" width="100px"></a>&nbsp;&nbsp;</li>
+            <li><a href="services.html"><img src="services.png" alt="services page" height="100px" width="100px"></a>&nbsp;&nbsp;</li>
+           <li><a href="locations.html"><img src="locations.jpg" alt="location" height="100px" width="100px"></a>&nbsp;&nbsp;</li>
+            <li><a href="contact.html"><img src="contact.png" alt="services page" height="100px" width="100px"></a>&nbsp;&nbsp;</li> 
+        </ul>
+    </nav>
+
+    <div>
+        <header>
+            <h1><img src="logo.png" alt="logo" height="200px" width="200px"> Shaafi hospital patient booking</h1>
+        </header>
+    </div>
+
+    <!-- Halkan waxaa ka bilaabanaya hal foom oo weyn (Form) oo wada jir ah -->
+    <form action="">
+        <fieldset>
+            <legend>PATIENT SECURITY DETAILS</legend>
+            
+            <p>
+                <label for="card">National health card</label><br>
+                <input type="text" name="card" id="card" placeholder="eg,Med-9901">
+            </p>
+            
+            <p>
+                <label for="email">Primary contact Email</label><br>
+                <!-- required wuxuu ku khasbaa qofka inuu buuxiyo -->
+                <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+            </p>       
+            
+            <p>
+                <label for="pin">Medical records encryption key</label><br>
+                <!-- required wuxuu ku khasbaa qofka inuu buuxiyo -->
+                <input type="password" name="password" id="pin" placeholder="enter your password" required>
+            </p>
+
+            <!-- 1. QAYBTA DEGMOOYINKA GOBOLKA BANAADIR -->
+            <p>
+                <label for="district">Dooro Degmadaada (Banadir District)</label><br>
+                <select name="district" id="district" required>
+                    <option value="" selected disabled>Select your district</option>
+                    <option value="hodan">Hodan</option>
+                    <option value="hawlwadaag">Howlwadaag</option>
+                    <option value="waaberi">Waaberi</option>
+                    <option value="warta nabadda">Warta Nabadda</option>
+                    <option value="boondheere">Boondheere</option>
+                    <option value="shangani">Shangani</option>
+                    <option value="xamar weyne">Xamar Weyne</option>
+                    <option value="xamar jajab">Xamar Jajab</option>
+                    <option value="dharkenley">Dharkenley</option>
+                    <option value="kaaran">Kaaran</option>
+                    <option value="yaaqshid">Yaaqshid</option>
+                    <option value="dayniile">Dayniile</option>
+                    <option value="wadajir">Wadajir</option>
+                </select>
+            </p>
+
+            <fieldset>
+                <legend>Triage department</legend>
+                <input type="radio" name="department" id="Generalmedicine" checked>
+                <label for="Generalmedicine">General medicine Out patient unit</label><br>
+                <input type="radio" name="department" id="pediatric">
+                <label for="pediatric">pediatric specialist</label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Pre-existing history checks</legend>
+                <input type="checkbox" name="known" id="known" checked>
+                <label for="known">known severe drug allergies</label><br>
+                <input type="checkbox" name="chronic" id="chronic">
+                <label for="chronic">chronic high blood pressure</label><br>
+                <input type="checkbox" name="metabolic" id="metabolic">
+                <label for="metabolic">metabolic insulin dependency/diabetes</label>
+            </fieldset>
+
+            <!-- 2. QAYBTA LAGA IIBSAN KARO DAAWOOYINKA (PHARMACY) -->
+            <fieldset>
+                <legend>Pharmacy Department</legend>
+                <p>Dooro haddii aad rabto inaad daawooyin ka iibsato farmashiyaha isbitaalka:</p>
+                <input type="checkbox" name="buy_medicine" id="buy_medicine">
+                <label for="buy_medicine">Hadii aad rabto Tick saar</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Submission</legend>
+                <input type="submit" value="submit">
+            </fieldset>
+
+        </fieldset>
+    </form>
+
+    <footer>
+        <p>&copy; 2026 Shaafi Hospital 🏥. All rights reserved.</p>
+    </footer>
+</body>
+</html>
